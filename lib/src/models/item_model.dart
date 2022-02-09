@@ -9,19 +9,19 @@ class ItemModel {
   final int descendants, score;
 
   ItemModel.fromJson(Map<String, dynamic> parsedJson)
-      : id = parsedJson['id'],
-        time = parsedJson['time'],
+      : id = parsedJson['id'] ?? 0,
+        time = parsedJson['time'] ?? 0,
         parent = parsedJson['parent'] ?? 0,
         dead = parsedJson['dead'] ?? false,
         deleted = parsedJson['deleted'] ?? false,
-        type = parsedJson['type'],
-        by = parsedJson['by'],
-        url = parsedJson['url'],
+        type = parsedJson['type'] ?? "",
+        by = parsedJson['by'] ?? "",
+        url = parsedJson['url'] ?? "",
         text = parsedJson['text'] ?? "",
-        title = parsedJson['title'],
+        title = parsedJson['title'] ?? "",
         kids = parsedJson['kids'] ?? [],
-        descendants = parsedJson['descendants'],
-        score = parsedJson['score'];
+        descendants = parsedJson['descendants'] ?? 0,
+        score = parsedJson['score'] ?? 0;
 
   ItemModel.fromDb(Map<String, dynamic> parsedJson)
       : id = parsedJson['id'],

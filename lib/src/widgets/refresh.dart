@@ -5,7 +5,7 @@ import '../blocs/stories_provider.dart';
 class Refresh extends StatelessWidget {
   final Widget child;
 
-  Refresh({required this.child}) {}
+  const Refresh({required this.child});
 
   @override
   Widget build(BuildContext context) {
